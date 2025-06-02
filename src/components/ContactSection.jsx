@@ -8,23 +8,23 @@ import {
   Twitch,
   Twitter,
 } from "lucide-react";
+import { useState } from "react";
 import { cn } from "../Lib/utils";
 import { useToast } from "./hooks/use-toast";
-import { useState } from "react";
 
 export const ContactSection = () => {
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true)
+    setIsSubmitting(true);
     setTimeout(() => {
       toast({
         title: "Message sent!",
         description: "Thank you for you message. I'll get back to you soon. ",
       });
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }, 1500);
   };
 
@@ -109,7 +109,10 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          <div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={handleSubmit}>
+          <div
+            className="bg-card p-8 rounded-lg shadow-xs"
+            onSubmit={handleSubmit}
+          >
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
             <form action="" className="space-y-6">
@@ -171,7 +174,7 @@ export const ContactSection = () => {
                   "cosmic-button w-full flex items-center justify-center gap-2"
                 )}
               >
-                {isSubmitting ? "Sending..." :"Send Message"}
+                {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={16} />
               </button>
             </form>

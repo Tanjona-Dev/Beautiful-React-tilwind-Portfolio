@@ -1,9 +1,9 @@
 import "./App.css";
 import Home from "./pages/Home";
-import { ThemeProvider } from "./utils/context";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { GlobalStyle } from "./utils/style";
+import { ThemeProvider } from "./utils/context";
 import { Toaster } from "./components/ui/toaster";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (

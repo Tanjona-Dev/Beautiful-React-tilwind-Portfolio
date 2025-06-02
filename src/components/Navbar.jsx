@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
 import { cn } from "../Lib/utils";
 import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -26,7 +26,7 @@ export function Navbar() {
     <nav
       className={cn(
         "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+        isScrolled ? "py-3 bg-background/80  shadow-xs" : "py-5 "
       )}
     >
       <div className="container flex items-center justify-around">
